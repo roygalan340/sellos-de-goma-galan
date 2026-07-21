@@ -72,11 +72,156 @@
 
     <div class="tarjeta">
         <img src="imagenes/publi_handy.jpg" alt="Logo" class="logo">
-        <h1>Roy garicia</h1>
+        <h1>Roy Garcia</h1>
         <p class="nombre-negocio">SELLOS DE GOMA "GALAN"</p>
         <p>Realizamos trabajos de imprenta en general</p>
         
         
+        <div class="carrusel">
+            <div class="carrusel-inner">
+
+        <div class="carrusel-item active">
+            <a href="imagenes/publi_handy.jpg" target="_blank">
+                <img src="imagenes/publi_handy.jpg" alt="Carrusel 1">
+            </a>
+        </div>
+        <div class="carrusel-item ">
+            <a href="imagenes/publi_handy.jpg" target="_blank">
+                <img src="imagenes/publi_handy.jpg" alt="Carrusel 2">
+            </a>
+        </div>
+        <div class="carrusel-item ">
+            <a href="imagenes/VOLANTEROY.png" target="_blank">
+                <img src="imagenes/VOLANTEROY.png" alt="Carrusel 3">
+            </a>
+        </div>
+        <div class="carrusel-item ">
+            <a href="imagenes/VOLANTEROY.png" target="_blank">
+                <img src="imagenes/VOLANTEROY.png" alt="Carrusel 4">
+            </a>
+        </div>
+            </div>
+            <button class="carrusel-control prev" onclick="carruselAnterior()">&#10094;</button>
+            <button class="carrusel-control next" onclick="carruselSiguiente()">&#10095;</button>
+            <div class="carrusel-indicadores">
+<span class="indicador active" data-slide="0"></span><span class="indicador " data-slide="1"></span><span class="indicador " data-slide="2"></span><span class="indicador " data-slide="3"></span>
+            </div>
+        </div>
+        <script>
+            (function() {
+                let slideIndex = 0;
+                let slides = document.querySelectorAll('.carrusel-item');
+                let indicadores = document.querySelectorAll('.indicador');
+                
+                function mostrarSlide(n) {
+                    slideIndex = n;
+                    if (slideIndex >= slides.length) slideIndex = 0;
+                    if (slideIndex < 0) slideIndex = slides.length - 1;
+                    
+                    slides.forEach(slide => slide.classList.remove('active'));
+                    indicadores.forEach(ind => ind.classList.remove('active'));
+                    
+                    slides[slideIndex].classList.add('active');
+                    indicadores[slideIndex].classList.add('active');
+                }
+                
+                window.carruselSiguiente = function() {
+                    mostrarSlide(slideIndex + 1);
+                };
+                
+                window.carruselAnterior = function() {
+                    mostrarSlide(slideIndex - 1);
+                };
+                
+                indicadores.forEach((ind, i) => {
+                    ind.addEventListener('click', () => mostrarSlide(i));
+                });
+                
+                setInterval(carruselSiguiente, 4000);
+            })();
+        </script>
+        <style>
+            .carrusel {
+                position: relative;
+                width: 100%;
+                margin: 20px 0;
+                overflow: hidden;
+                border-radius: 15px;
+            }
+            
+            .carrusel-inner {
+                position: relative;
+                width: 100%;
+                height: 200px;
+            }
+            
+            .carrusel-item {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
+            }
+            
+            .carrusel-item.active {
+                opacity: 1;
+            }
+            
+            .carrusel-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+            
+            .carrusel-control {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(0,0,0,0.5);
+                color: white;
+                border: none;
+                font-size: 24px;
+                padding: 10px 15px;
+                cursor: pointer;
+                border-radius: 50%;
+                z-index: 10;
+            }
+            
+            .carrusel-control:hover {
+                background: rgba(0,0,0,0.7);
+            }
+            
+            .carrusel-control.prev {
+                left: 10px;
+            }
+            
+            .carrusel-control.next {
+                right: 10px;
+            }
+            
+            .carrusel-indicadores {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 8px;
+                z-index: 10;
+            }
+            
+            .indicador {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: rgba(255,255,255,0.5);
+                cursor: pointer;
+            }
+            
+            .indicador.active {
+                background: #2563eb;
+            }
+        </style>
         
         
         

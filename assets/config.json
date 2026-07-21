@@ -1,7 +1,7 @@
 {
     "informacion": {
         "nombre_negocio": "SELLOS DE GOMA \"GALAN\"",
-        "titulo_principal": "Roy garicia",
+        "titulo_principal": "Roy Garcia",
         "descripcion": "Realizamos trabajos de imprenta en general",
         "whatsapp": "69240891",
         "catalogo": "https://photos.app.goo.gl/f6sjrJ6hnXG6bAVFA",
@@ -15,7 +15,12 @@
     },
     "listas_precios": [],
     "galeria_trabajos": [],
-    "carrusel_principal": [],
+    "carrusel_principal": [
+        "publi_handy.jpg",
+        "publi_handy.jpg",
+        "VOLANTEROY.png",
+        "VOLANTEROY.png"
+    ],
     "botones": [],
     "plantilla": "Moderna"
 }
