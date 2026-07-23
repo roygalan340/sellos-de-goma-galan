@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SELLOS DE GOMA "GALAN"</title>
+    
+    <!-- Open Graph / Etiquetas de Vista Previa para Redes Sociales -->
+    <meta property="og:title" content="SELLOS DE GOMA "GALAN"" />
+    <meta property="og:description" content="Realizamos trabajos de imprenta en general" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/roygalan340/roygarcia-sellos-de-goma/main/201824.jpg" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SELLOS DE GOMA "GALAN"">
+    <meta name="twitter:description" content="Realizamos trabajos de imprenta en general">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/roygalan340/roygarcia-sellos-de-goma/main/201824.jpg">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Fondo con degradado azul y rojo suave */
@@ -71,7 +84,7 @@
 <body>
 
     <div class="tarjeta">
-        <img src="imagenes/handy.jpg" alt="Logo" class="logo">
+        <img src="https://raw.githubusercontent.com/roygalan340/roygarcia-sellos-de-goma/main/201824.jpg" alt="Logo" class="logo">
         <h1>Roy Garcia</h1>
         <p class="nombre-negocio">SELLOS DE GOMA "GALAN"</p>
         <p>Realizamos trabajos de imprenta en general</p>
@@ -90,11 +103,21 @@
                 <img src="imagenes/VOLANTEROY.png" alt="Carrusel 2">
             </a>
         </div>
+        <div class="carrusel-item ">
+            <a href="imagenes/s841modelo.png" target="_blank">
+                <img src="imagenes/s841modelo.png" alt="Carrusel 3">
+            </a>
+        </div>
+        <div class="carrusel-item ">
+            <a href="imagenes/carla.jpg" target="_blank">
+                <img src="imagenes/carla.jpg" alt="Carrusel 4">
+            </a>
+        </div>
             </div>
             <button class="carrusel-control prev" onclick="carruselAnterior()">&#10094;</button>
             <button class="carrusel-control next" onclick="carruselSiguiente()">&#10095;</button>
             <div class="carrusel-indicadores">
-<span class="indicador active" data-slide="0"></span><span class="indicador " data-slide="1"></span>
+<span class="indicador active" data-slide="0"></span><span class="indicador " data-slide="1"></span><span class="indicador " data-slide="2"></span><span class="indicador " data-slide="3"></span>
             </div>
         </div>
         <script>
@@ -160,7 +183,8 @@
             .carrusel-item img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                object-fit: contain;
+                background: #fff;
                 border-radius: 15px;
             }
             

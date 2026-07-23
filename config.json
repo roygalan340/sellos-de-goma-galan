@@ -11,13 +11,15 @@
         "pagina_web": "imprentagarcia.webnode.es",
         "google_maps": "",
         "correo": "",
-        "logo": "handy.jpg"
+        "logo": "carla.jpg"
     },
     "listas_precios": [],
     "galeria_trabajos": [],
     "carrusel_principal": [
         "s842fuccio.jpg",
-        "VOLANTEROY.png"
+        "VOLANTEROY.png",
+        "s841modelo.png",
+        "carla.jpg"
     ],
     "botones": [],
     "plantilla": "Moderna"
